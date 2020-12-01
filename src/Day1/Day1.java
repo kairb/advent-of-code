@@ -8,13 +8,14 @@ import java.util.Scanner;
 public class Day1 {
     public static void main(String[] args) {
         try{
-
             File expenseReport = new File ("src/Day1/ExpenseReport.txt");
             Scanner reader = new Scanner(expenseReport);
             ArrayList<Integer> expenses = new ArrayList<>();
+
             while(reader.hasNextInt()){
                 expenses.add(reader.nextInt());
             }
+
             System.out.println("Answer part 1: " + getAnswer(expenses, 2020));
             System.out.println("Answer part 2: " + getAnswerPart2(expenses, 2020));
 
