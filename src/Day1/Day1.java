@@ -38,7 +38,7 @@ public class Day1 {
     private static int getAnswerPart2(ArrayList<Integer> expenses, int sum){
         for(int i = 0; i < expenses.size(); i++){
             for (int j = i; j < expenses.size(); j++){
-                for (int k = 0; k < expenses.size(); k++){
+                for (int k = j; k < expenses.size(); k++){
                     if(expenses.get(i) + expenses.get(j) + expenses.get(k) == sum){
                         return expenses.get(i) * expenses.get(j) * expenses.get(k);
                     }
