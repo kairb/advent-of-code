@@ -1,4 +1,4 @@
-package Day1;
+package year2020.Day1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Day1 {
     public static void main(String[] args) {
         try{
-            File expenseReport = new File ("src/Day1/ExpenseReport.txt");
+            File expenseReport = new File ("src/year2020.Day1/ExpenseReport.txt");
             Scanner reader = new Scanner(expenseReport);
             ArrayList<Integer> expenses = new ArrayList<>();
 
