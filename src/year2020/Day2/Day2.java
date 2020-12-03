@@ -48,20 +48,12 @@ public class Day2 {
     private static int findValidPasswordCountPart2(ArrayList<String> passwords){
         int validPasswords = 0;
         for(String password: passwords){
-            int occsInPosition = 0;
             String[] data = password.split(" ");
             int firstIndex = Integer.parseInt(data[0].split("-")[0]) -1;
             int secondIndex = Integer.parseInt(data[0].split("-")[1]) -1;
             char requiredChar = data[1].charAt(0);
-            if (data[2].charAt(firstIndex) == requiredChar ){
-                occsInPosition +=1;
-            }
-
-            if (data[2].charAt(secondIndex) == requiredChar ){
-                occsInPosition +=1;
-            }
-
-            if(occsInPosition == 1){
+            if ((data[2].charAt(firstIndex) == requiredChar|| data[2].charAt(secondIndex) == requiredChar ) &&
+                    data[2].charAt(firstIndex) != data[2].charAt(secondIndex)){
                 validPasswords +=1;
             }
         }
