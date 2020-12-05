@@ -41,8 +41,6 @@ public class Day3 {
 
     private static int traverseForestPart2(ArrayList<String> map, String[] slopes){
         int treeProduct = 1;
-
-
         for(String slope: slopes) {
             int trees = 0;
             int yPointer = 0;
